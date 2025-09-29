@@ -15,11 +15,12 @@
 
         <nav class="navbar">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact Me</a></li>
-                <li><a href="#">Social Media</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Me</a></li>
+                <li><a href="{% url 'projects'%}">Projects</a></li>
+                <li><a href="{% url 'contactform' %}">Contact Me</a></li>
+                <li><a href="{% url 'socialmedia' %}">Social Media</a></li>
+
             </ul>
         </nav>
     </header>
@@ -65,9 +66,10 @@
     <footer>
         <nav class="footer-nav">
             <ul>
-                <li><a href="#">Legal Rights</a></li>
-                <li><a href="#">Legal Notice</a></li>
-                <li><a href="#">Contact Me</a></li>
+                <li><a href="{% url 'legal'%}">Legal Rights</a></li>
+                <li><a href="{% url 'imprint' %}">Legal Notice</a></li>
+                <li><a href="{% url 'contactform' %}">Contact Me</a></li>
+                <p>&copy; 2025 Alex Gramm. All rights reserved.</p>
             </ul>
         </nav>
     </footer>

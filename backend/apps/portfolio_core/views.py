@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from apps.contactform.views import contact_form_view
 
 # Create your views here.
 def home(request):
@@ -10,8 +11,11 @@ def about_me(request):
 def projects(request):
     return render(request, 'projects.html')
 
-def contact_form(request):
-    return render(request, 'contactform.html')
-
 def social_media(request):
     return render(request, 'social-media.html')
+
+def legal_information(request):
+    return render(request, 'legal-rights.html')
+
+def imprint(request):
+    return render(request, "imprint.html")

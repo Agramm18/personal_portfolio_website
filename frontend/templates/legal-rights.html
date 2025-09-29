@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Legal Notice</title>
 </head>
 <body>
     <header>
@@ -15,6 +15,7 @@
         <h1 class="website-title">Hello, I'm Alex, a self-taught software developer</h1>
 
         <nav class="navbar">
+
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'about' %}">About Me</a></li>
@@ -23,45 +24,22 @@
                 <li><a href="{% url 'socialmedia' %}">Social Media</a></li>
 
             </ul>
+
         </nav>
 
     </header>
 
     <main>
-
-        <section class="hero-text">
-
-            <div class="hero-container">
-
-                <h2 class="hero-sub-text"> What my goal is?</h2>
-                <p class="hero-sub-text">to become a ml engineer and software developer</p>
-
-            </div>
-
-        </section>
-
-        <section class="hero-link">
-
-            <div class="github-btn">
-                <a href="#">Visit me on Github</a>
-            </div>
-
-        </section>
-
-        <section class="skill-set">
-            <div class="skill-container">
-                <h3 class="skill-title">Coding Skills</h3>
-
+        <section class="legal-notice">
+            <h2 class="title">Click here to download the legal information (PDF)</h2>
+            <div class="container">
                 <ul>
-                    <li>Python: advanced</li>
-                    <li>HTML5: beginner</li>
-                    <li>CSS: beginner</li>
-                    <li>Java: beginner</li>
-                    <li>MySQL: beginner</li>
+                    <li><a href="#">Imprint/Legal Notice</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Cookie Rights</a></li>
                 </ul>
             </div>
         </section>
-
     </main>
 
     <footer>

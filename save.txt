@@ -1,0 +1,81 @@
+from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
+from django.core.validators import MinValueValidator, MaxValueValidator
+
+company_position = [
+    ("ceo", "CEO"),
+    ("cfo", "CFO"),
+    ("coo", "COO"),
+    ("cto", "CTO"),
+    ("cio", "CIO"),
+    ("cmo", "CMO"),
+    ("chro", "CHRO"),
+    ("managing-director", "Managing Director / Geschäftsführer"),
+    ("vice-president", "Vice President (VP)"),
+    ("director", "Director"),
+    ("head-of", "Head of Department"),
+    ("team-lead", "Team Lead"),
+    ("manager", "Manager"),
+    ("project-manager", "Project Manager"),
+    ("hr-manager", "HR Manager"),
+    ("recruiter", "Recruiter"),
+    ("talent-acquisition", "Talent Acquisition Specialist"),
+    ("consultant", "Consultant"),
+]
+
+recruiter_gender = [
+    ("male", "Male"),
+    ("female", "Female"),
+    ("other", "Other"),
+]
+
+additional_titles = [
+    ("dr", "Dr."),
+    ("prof", "Prof."),
+    ("prof-dr", "Prof. Dr."),
+    ("phd", "PhD"),
+    ("mba", "MBA"),
+    ("llm", "LL.M."),
+    ("md", "MD"),
+    ("dipl-ing", "Dipl.-Ing."),
+    ("mag", "Mag."),
+    ("pd", "Priv.-Doz. (PD)"),
+    ("univ-prof", "Univ.-Prof."),
+]
+
+company_industry_fields = [
+    ("it", "Information Technology"),
+    ("finance", "Finance"),
+    ("consulting", "Consulting"),
+    ("manufacturing", "Manufacturing"),
+    ("healthcare", "Healthcare"),
+    ("other", "Other"),
+]
+
+gdpr_choices = [
+    ("yes", "YES"),
+    ("no", "NO"),
+]
+
+class FormCollector(models.Model):
+    company_position_value = models.CharField(max_length=50, choices=company_position, blank=True, null=True)
+    gender_value = models.CharField(max_length=10, choices=recruiter_gender, blank=True, null=True)
+    additional_titles_value = models.CharField(max_length=10, choices=additional_titles, blank=True, null=True)
+    fname_value = models.CharField(max_length=20)
+    lname_value = models.CharField(max_length=20)
+    email = models.EmailField(max_length=25)
+    phone_recruiter = PhoneNumberField(blank=True, null=True)
+    company_name_value = models.CharField(max_length=25)
+    company_url_value = models.URLField(max_length=75)
+    company_email_value = models.EmailField(max_length=25)
+    company_phone = PhoneNumberField(blank=True, null=True)
+    company_address = models.CharField(max_length=150)
+    company_industry_fields_value = models.CharField(max_length=50, choices=company_industry_fields, blank=True, null=True)
+    job_title = models.CharField(max_length=50)
+    location_country = models.CharField(max_length=25)
+    location_city = models.CharField(max_length=25)
+    experience_level = models.CharField(max_length=25)
+    tasks = models.CharField(max_length=100)
+    salary = models.IntegerField(validators=[MinValueValidator(45000)], blank=True, null=True)
+    other_infos = models.CharField(max_length=100, blank=True, null=True)
+    gdpr_value = models.CharField(max_length=10, choices=gdpr_choices, blank=True, null=True)

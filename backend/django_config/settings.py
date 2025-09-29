@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.portfolio_core',
-    'apps.contactform'
+    'apps.contactform',
+    'phonenumber_field'
 ]
 
 MIDDLEWARE = [
@@ -78,8 +79,8 @@ WSGI_APPLICATION = 'django_config.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": os.getenv("DB_NAME", "default_db"),
-        "USER": os.getenv("DB_USER", "root"),
+        "NAME": os.getenv("DB_NAME", "portfolio_website"),
+        "USER": os.getenv("DB_USER", "agramm"),
         "PASSWORD": os.getenv("DB_PASSWORD", ""),
         "HOST": os.getenv("DB_HOST", "localhost"),
         "PORT": os.getenv("DB_PORT", "3306"),
