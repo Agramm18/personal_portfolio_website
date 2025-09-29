@@ -20,7 +20,6 @@
                 <li><a href="{% url 'projects'%}">Projects</a></li>
                 <li><a href="{% url 'contactform' %}">Contact Me</a></li>
                 <li><a href="{% url 'socialmedia' %}">Social Media</a></li>
-
             </ul>
         </nav>
     </header>
@@ -39,8 +38,8 @@
                     <legend>Your Information</legend>
 
                     <label for="position">Position in the company</label>
-                    <select name="position" id="position">
-                        <option value="">-- None --</option>
+                    <select name="position" id="position" required>
+                        <option value="none">-- None --</option>
                         <option value="ceo">CEO</option>
                         <option value="cfo">CFO</option>
                         <option value="coo">COO</option>
@@ -62,16 +61,15 @@
                     </select>
 
                     <label for="gender">Gender</label>
-                    <select name="gender" id="gender">
-                        <option value="">-- None --</option>
+                    <select name="gender" id="gender" required>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="other">Other</option>
                     </select>
 
                     <label for="additional-title">Additional title</label>
-                    <select name="additional-title" id="additional-title">
-                        <option value="">-- None --</option>
+                    <select name="additional-title" id="additional-title" required>
+                        <option value="none">-- None --</option>
                         <option value="dr">Dr.</option>
                         <option value="prof">Prof.</option>
                         <option value="prof-dr">Prof. Dr.</option>
@@ -109,17 +107,17 @@
                     <input type="url" id="website" name="website" required>
 
                     <label for="company-email">Company email</label>
-                    <input type="email" id="company_email" name="company-email">
+                    <input type="email" id="company_email" name="company_email" required>
 
                     <label for="company-phone">Company phone</label>
-                    <input type="tel" id="company-phone" name="company-phone" pattern="^\+?[0-9\s\-]{10,20}$">
+                    <input type="tel" id="company-phone" name="company-phone" required pattern="^\+?[0-9\s\-]{10,20}$">
 
                     <label for="company-address">Company address</label>
-                    <input type="text" id="company-address" name="company-address">
+                    <input type="text" id="company-address" name="company_address" required>
 
                     <label for="company-industry">Industry</label>
-                    <select id="company-industry" name="company-industry">
-                        <option value="">-- None --s</option>
+                    <select id="company-industry" name="company_industry" required>
+                        <option value="none">-- None --</option>
                         <option value="it">Information Technology</option>
                         <option value="finance">Finance</option>
                         <option value="consulting">Consulting</option>
@@ -134,16 +132,16 @@
                     <legend>Job Information</legend>
 
                     <label for="job-title">Job title</label>
-                    <input type="text" id="job-title" name="job-title" required>
+                    <input type="text" id="job-title" name="job_title" required>
 
                     <label for="location-country">Job location (Country)</label>
-                    <input type="text" id="location-country" name="location-country" required>
+                    <input type="text" id="location-country" name="location_country" required>
 
                     <label for="location-city">Job location (City)</label>
-                    <input type="text" id="location-city" name="location-city" required>
+                    <input type="text" id="location-city" name="location_city" required>
 
                     <label for="experience-level">Experience level</label>
-                    <input type="text" id="experience-level" name="experience-level" required>
+                    <input type="text" id="experience-level" name="experience_level" required>
 
                     <label for="tasks">Job tasks</label>
                     <textarea id="tasks" name="tasks" required></textarea>
@@ -157,7 +155,7 @@
                     <legend>Additional Information</legend>
 
                     <label for="other-infos">Other notes</label>
-                    <textarea id="other-infos" name="other-infos"></textarea>
+                    <textarea id="other-infos" name="other_infos"></textarea>
                 </fieldset>
 
                 <!-- GDPR -->

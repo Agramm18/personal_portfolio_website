@@ -2,9 +2,10 @@ from django.shortcuts import render
 import mysql.connector
 import os
 
-
 def contact_form_view(request):
 
+    #################################################################################################
+    #Database Logic
     if request.method == "POST":
         try:
             #recruiter-info
@@ -47,6 +48,7 @@ def contact_form_view(request):
         
         cur = sql_server.cursor()
 
+        #put the data in the SQL_TABLE
         sql = """
         INSERT INTO contactform 
         (lname, gender, email, phone, company_name, company_url, company_email, company_phone, gdpr_value, created_at)
@@ -66,8 +68,63 @@ def contact_form_view(request):
         )
 
         cur.execute(sql, values)
-        print("All data where transmittet")
+        print("All data where transmittet for the database")
         sql_server.commit()
         cur.close()
+
+    ######################################################
+    #email_logic
+
+    if request.method == "POST":
+        try:
+            #Get the dataf from the contact form via POST.get
+
+            #Form sections
+            #recruiter-info
+            position = request.POST.get("position")
+            gender = request.POST.get("gender")
+            additional_title = request.POST.get("additional-title")
+            fname = request.POST.get("fname")
+            lname = request.POST.get("lname")
+            email = request.POST.get("email")
+            phone = request.POST.get("tel-number")
+
+            #compnay-info
+            compnay_name = request.POST.get("company-name")
+            company_url = request.POST.get("website")
+            company_mail = request.POST.get("company_email")
+            company_phone = request.POST.get("company-phone")
+            company_address = request.POST.get("company_address")
+            company_industry = request.POST.get("company_industry")
+            
+
+            #job-info
+            job_title = request.POST.get("job_title")
+            location_country = request.POST.get("location_country")
+            location_city = request.POST.get("location_city")
+            experience_level = request.POST.get("experience_level")
+            tasks = request.POST.get("tasks")
+            yearly_gross_salary = request.POST.get("salary")
+
+
+            #other-infos
+            additional_information = request.POST.get("other_infos")
+            gdbpr_value = request.POST.get("gdpr")
+
+            #check if data exsist
+            if not all([
+                position, gender, additional_title, fname, lname, email, phone,
+                compnay_name, company_url, company_mail, company_phone, company_industry, company_address,
+                job_title, location_country, location_city, experience_level, tasks, yearly_gross_salary,
+                additional_information, gdbpr_value
+            ]):
+                raise ValueError("No input where submittet for the email please try again")
+            
+            else:
+                print("All data wehre submittet thank you for your message")
+
+        except ValueError as e:
+            print("There is an error in the POST for the email please try again")
+            print("The error is: ", e)
 
     return render(request, "contactform.html")
