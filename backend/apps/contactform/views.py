@@ -1,6 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import mysql.connector
+import smtplib
 import os
+from email.message import EmailMessage
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def contact_form_view(request):
 
@@ -27,7 +32,7 @@ def contact_form_view(request):
             gdbpr_value = request.POST.get("gdpr")
 
 
-            if not all(lname, gender, email, phone, compnay_name, company_url, company_mail, company_phone, gdbpr_value):
+            if not all([lname, gender, email, phone, compnay_name, company_url, company_mail, company_phone, gdbpr_value]):
                 raise ValueError("This field is empty or no data where transmittet please try again")
         
         except ValueError as e:
@@ -121,10 +126,63 @@ def contact_form_view(request):
                 raise ValueError("No input where submittet for the email please try again")
             
             else:
-                print("All data wehre submittet thank you for your message")
+                sender_email = os.getenv("SMTP_SENDER_EMAIL")
+                reciver_email = os.getenv("SMTP_SENDER_EMAIL")
+                app_pwsd = os.getenv("EMAIL_APP_PASSWORD")
+
+
+                msg = EmailMessage()
+                msg["Subject"] = f"New job offer from {compnay_name} the email_adress is: {email} or {company_mail}"
+                msg["From"] = sender_email
+                msg["To"] = reciver_email
+                msg["Reply-To"] = email
+
+                msg.set_content(f"""
+                Hello Alex, 
+
+                you have received a new job offer from your website.
+
+                The following person has contacted you:
+                {gender} {additional_title} {fname} {lname}
+
+                You can reach this person via:
+                Email: {email}
+                Phone: {phone}
+                Position in the company: {position}
+
+                --- Company Information ---
+                Name: {compnay_name}
+                Website: {company_url}
+                Address: {company_address}
+                Industry: {company_industry}
+                Contact: {company_mail}, {company_phone}
+
+                --- Job Offer Details ---
+                Job Title: {job_title}
+                Location: {location_city}, {location_country}
+                Experience Level: {experience_level}
+                Tasks: {tasks}
+                Yearly Gross Salary: {yearly_gross_salary}
+
+                --- Additional Information ---
+                {additional_information}
+                GDPR Consent: {gdbpr_value} (yes/no)
+
+                Please make sure to respond to this person.  
+                Good luck, and thank you!
+                """)
+
+                with smtplib.SMTP("smtp.gmail.com", 587) as server:
+                    server.starttls()
+                    server.login(sender_email, app_pwsd)
+                    server.send_message(msg)
+                    return redirect("thankyou")
 
         except ValueError as e:
             print("There is an error in the POST for the email please try again")
             print("The error is: ", e)
 
     return render(request, "contactform.html")
+
+def thankyou(request):
+    return render(request, "thankyou.html")

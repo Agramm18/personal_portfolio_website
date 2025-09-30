@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+
+        <div class="res-downlaod">
+            <a href="#">Click Here to download my resume (PDF)</a>
+        </div>
+        
+        <h1 class="website-title">Hello, I'm Alex, a self-taught software developer</h1>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Me</a></li>
+                <li><a href="{% url 'projects'%}">Projects</a></li>
+                <li><a href="{% url 'contactform' %}">Contact Me</a></li>
+                <li><a href="{% url 'socialmedia' %}">Social Media</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="thankyou-container">
+            <h1 class="title">Thank you for your message! ✅</h1>
+            <p>I will get back to you as soon as possible via email or phone.</p>
+            <p>In the meantime, why not check out my GitHub account?</p>
+            <a href="https://github.com/Agramm18" target="_blank">Visit my GitHub Profile</a>
+            <p>Or connect with me on social media:</p>
+            <a href="{% url 'socialmedia' %}">Go to my Social Media Page</a>
+        </div>
+    </main>
+
+    <footer>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="{% url 'legal'%}">Legal Rights</a></li>
+                <li><a href="{% url 'imprint' %}">Legal Notice</a></li>
+                <li><a href="{% url 'contactform' %}">Contact Me</a></li>
+                <p>&copy; 2025 Alex Gramm. All rights reserved.</p>
+            </ul>
+        </nav>
+
+    </footer>
+</body>
+</html>
