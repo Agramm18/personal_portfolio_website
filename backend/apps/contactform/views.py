@@ -130,7 +130,6 @@ def contact_form_view(request):
                 reciver_email = os.getenv("SMTP_SENDER_EMAIL")
                 app_pwsd = os.getenv("EMAIL_APP_PASSWORD")
 
-
                 msg = EmailMessage()
                 msg["Subject"] = f"New job offer from {compnay_name} the email_adress is: {email} or {company_mail}"
                 msg["From"] = sender_email

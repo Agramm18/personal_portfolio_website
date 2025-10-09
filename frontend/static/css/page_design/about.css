@@ -1,0 +1,21 @@
+.about-alex {
+    margin-top: 50px;
+}
+.about-alex h3 {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.about-alex li {
+    list-style-type: none;
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+}
+
+.personal-picture {
+    margin-left: 200px;
+    width: 40%;
+    height: 55%;
+}

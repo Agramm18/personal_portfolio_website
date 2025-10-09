@@ -1,0 +1,27 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+}
+
+.hero-text {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.job-container {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.hero-link {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    height: 100%;
+}
+
+.skill-set {
+    grid-column: 3;
+    grid-row: 1 / 3;
+}

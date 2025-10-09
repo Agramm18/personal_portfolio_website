@@ -1,194 +1,210 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
+
+    <!-- Library Imports -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/78af35e736.js" crossorigin="anonymous"></script>
+
+    <!-- Core Design -->
+    <link rel="stylesheet" href="{% static 'css/core/background.css' %}">
+    <link rel="stylesheet" href="{% static 'css/core/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/core/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/core/footer.css' %}">
+
+    <!-- Layout -->
+    <link rel="stylesheet" href="{% static 'css/layout/base_layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout/header_grid.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout/contact_grid.css' %}">
+
+    <!-- Page Design -->
+    <link rel="stylesheet" href="{% static 'css/page_design/contact.css' %}">
 </head>
 <body>
-    <header>
-        <div class="res-download">
-            <a href="#">Click here to download my resume (PDF)</a>
-        </div>
-        
-        <h1 class="website-title">Hello, I'm Alex, a self-taught software developer</h1>
+<header>
+    <div class="res-download">
+        <a href="#">Click Here to download my resume (PDF)</a>
+    </div>
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'about' %}">About Me</a></li>
-                <li><a href="{% url 'projects'%}">Projects</a></li>
-                <li><a href="{% url 'contactform' %}">Contact Me</a></li>
-                <li><a href="{% url 'socialmedia' %}">Social Media</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h1 class="website-title">Hello, I'm Alex, a self-taught software developer</h1>
 
-    <main>
-        <section class="contact-alex">
-            <form method="post" action="{% url 'contactform' %}">
-                {% csrf_token %}
+    <nav class="navbar">
+        <ul>
+            <li><a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="{% url 'about' %}"><i class="fa-solid fa-user"></i> About Me</a></li>
+            <li><a href="{% url 'projects' %}"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+            <li><a href="{% url 'contactform' %}"><i class="fa-solid fa-envelope"></i> Contact Me</a></li>
+            <li><a href="{% url 'socialmedia' %}"><i class="fa-solid fa-hashtag"></i> Social Media</a></li>
+        </ul>
+    </nav>
+</header>
 
-                <div class="hero">
-                    <h2 class="form-title">Feel free to contact me</h2>
-                </div>
+<main>
+<section class="contact-alex">
+<form method="post" action="{% url 'contactform' %}">
+    {% csrf_token %}
 
-                <!-- Personal Information -->
-                <fieldset class="recruiter">
-                    <legend>Your Information</legend>
+    <div class="hero">
+        <h2 class="form-title">Feel free to contact me</h2>
+    </div>
 
-                    <label for="position">Position in the company</label>
-                    <select name="position" id="position" required>
-                        <option value="none">-- None --</option>
-                        <option value="ceo">CEO</option>
-                        <option value="cfo">CFO</option>
-                        <option value="coo">COO</option>
-                        <option value="cto">CTO</option>
-                        <option value="cio">CIO</option>
-                        <option value="cmo">CMO</option>
-                        <option value="chro">CHRO</option>
-                        <option value="managing-director">Managing Director / Geschäftsführer</option>
-                        <option value="vice-president">Vice President (VP)</option>
-                        <option value="director">Director</option>
-                        <option value="head-of">Head of Department</option>
-                        <option value="team-lead">Team Lead</option>
-                        <option value="manager">Manager</option>
-                        <option value="project-manager">Project Manager</option>
-                        <option value="hr-manager">HR Manager</option>
-                        <option value="recruiter">Recruiter</option>
-                        <option value="talent-acquisition">Talent Acquisition Specialist</option>
-                        <option value="consultant">Consultant</option>
-                    </select>
+    <!-- Personal Information -->
+    <fieldset class="recruiter">
+        <legend>Your Information</legend>
 
-                    <label for="gender">Gender</label>
-                    <select name="gender" id="gender" required>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select>
+        <label for="position">Position in the company</label>
+        <select name="position" id="position" required>
+            <option value="none">-- None --</option>
+            <option value="ceo">CEO</option>
+            <option value="cfo">CFO</option>
+            <option value="coo">COO</option>
+            <option value="cto">CTO</option>
+            <option value="cio">CIO</option>
+            <option value="cmo">CMO</option>
+            <option value="chro">CHRO</option>
+            <option value="managing-director">Managing Director / Geschäftsführer</option>
+            <option value="vice-president">Vice President (VP)</option>
+            <option value="director">Director</option>
+            <option value="head-of">Head of Department</option>
+            <option value="team-lead">Team Lead</option>
+            <option value="manager">Manager</option>
+            <option value="project-manager">Project Manager</option>
+            <option value="hr-manager">HR Manager</option>
+            <option value="recruiter">Recruiter</option>
+            <option value="talent-acquisition">Talent Acquisition Specialist</option>
+            <option value="consultant">Consultant</option>
+        </select>
 
-                    <label for="additional-title">Additional title</label>
-                    <select name="additional-title" id="additional-title" required>
-                        <option value="none">-- None --</option>
-                        <option value="dr">Dr.</option>
-                        <option value="prof">Prof.</option>
-                        <option value="prof-dr">Prof. Dr.</option>
-                        <option value="phd">PhD</option>
-                        <option value="mba">MBA</option>
-                        <option value="llm">LL.M.</option>
-                        <option value="md">MD</option>
-                        <option value="dipl-ing">Dipl.-Ing.</option>
-                        <option value="mag">Mag.</option>
-                        <option value="pd">Priv.-Doz. (PD)</option>
-                        <option value="univ-prof">Univ.-Prof.</option>
-                    </select>
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
 
-                    <label for="fname">First name</label>
-                    <input type="text" id="fname" name="fname" required minlength="2">
+        <label for="additional-title">Additional title</label>
+        <select name="additional-title" id="additional-title" required>
+            <option value="none">-- None --</option>
+            <option value="dr">Dr.</option>
+            <option value="prof">Prof.</option>
+            <option value="prof-dr">Prof. Dr.</option>
+            <option value="phd">PhD</option>
+            <option value="mba">MBA</option>
+            <option value="llm">LL.M.</option>
+            <option value="md">MD</option>
+            <option value="dipl-ing">Dipl.-Ing.</option>
+            <option value="mag">Mag.</option>
+            <option value="pd">Priv.-Doz. (PD)</option>
+            <option value="univ-prof">Univ.-Prof.</option>
+        </select>
 
-                    <label for="lname">Last name</label>
-                    <input type="text" id="lname" name="lname" required minlength="2">
+        <label for="fname">First name</label>
+        <input type="text" id="fname" name="fname" required minlength="2">
 
-                    <label for="email">Email address</label>
-                    <input type="email" id="email" name="email" required>
+        <label for="lname">Last name</label>
+        <input type="text" id="lname" name="lname" required minlength="2">
 
-                    <label for="tel-number">Phone number</label>
-                    <input type="tel" id="tel-number" name="tel-number" required pattern="^\+?[0-9\s\-]{10,20}$">
-                </fieldset>
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required>
 
-                <!-- Company Information -->
-                <fieldset class="company">
-                    <legend>Company Information</legend>
+        <label for="tel-number">Phone number</label>
+        <input type="tel" id="tel-number" name="tel-number" required pattern="^\+?[0-9\s\-]{10,20}$">
+    </fieldset>
 
-                    <label for="company-name">Company name</label>
-                    <input type="text" id="company-name" name="company-name" required minlength="2">
+    <!-- Company Information -->
+    <fieldset class="company">
+        <legend>Company Information</legend>
 
-                    <label for="website">Company website</label>
-                    <input type="url" id="website" name="website" required>
+        <label for="company-name">Company name</label>
+        <input type="text" id="company-name" name="company-name" required minlength="2">
 
-                    <label for="company-email">Company email</label>
-                    <input type="email" id="company_email" name="company_email" required>
+        <label for="website">Company website</label>
+        <input type="url" id="website" name="website" required>
 
-                    <label for="company-phone">Company phone</label>
-                    <input type="tel" id="company-phone" name="company-phone" required pattern="^\+?[0-9\s\-]{10,20}$">
+        <label for="company-email">Company email</label>
+        <input type="email" id="company_email" name="company_email" required>
 
-                    <label for="company-address">Company address</label>
-                    <input type="text" id="company-address" name="company_address" required>
+        <label for="company-phone">Company phone</label>
+        <input type="tel" id="company-phone" name="company-phone" required pattern="^\+?[0-9\s\-]{10,20}$">
 
-                    <label for="company-industry">Industry</label>
-                    <select id="company-industry" name="company_industry" required>
-                        <option value="none">-- None --</option>
-                        <option value="it">Information Technology</option>
-                        <option value="finance">Finance</option>
-                        <option value="consulting">Consulting</option>
-                        <option value="manufacturing">Manufacturing</option>
-                        <option value="healthcare">Healthcare</option>
-                        <option value="other">Other</option>
-                    </select>
-                </fieldset>
+        <label for="company-address">Company address</label>
+        <input type="text" id="company-address" name="company_address" required>
 
-                <!-- Job Information -->
-                <fieldset class="job">
-                    <legend>Job Information</legend>
+        <label for="company-industry">Industry</label>
+        <select id="company-industry" name="company_industry" required>
+            <option value="none">-- None --</option>
+            <option value="it">Information Technology</option>
+            <option value="finance">Finance</option>
+            <option value="consulting">Consulting</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="other">Other</option>
+        </select>
+    </fieldset>
 
-                    <label for="job-title">Job title</label>
-                    <input type="text" id="job-title" name="job_title" required>
+    <!-- Job Information -->
+    <fieldset class="job">
+        <legend>Job Information</legend>
 
-                    <label for="location-country">Job location (Country)</label>
-                    <input type="text" id="location-country" name="location_country" required>
+        <label for="job-title">Job title</label>
+        <input type="text" id="job-title" name="job_title" required>
 
-                    <label for="location-city">Job location (City)</label>
-                    <input type="text" id="location-city" name="location_city" required>
+        <label for="location-country">Job location (Country)</label>
+        <input type="text" id="location-country" name="location_country" required>
 
-                    <label for="experience-level">Experience level</label>
-                    <input type="text" id="experience-level" name="experience_level" required>
+        <label for="location-city">Job location (City)</label>
+        <input type="text" id="location-city" name="location_city" required>
 
-                    <label for="tasks">Job tasks</label>
-                    <textarea id="tasks" name="tasks" required></textarea>
+        <label for="experience-level">Experience level</label>
+        <input type="text" id="experience-level" name="experience_level" required>
 
-                    <label for="salary">Yearly gross salary (€)</label>
-                    <input type="number" id="salary" name="salary" min="0" step="1000" required>
-                </fieldset>
+        <label for="tasks">Job tasks</label>
+        <textarea id="tasks" name="tasks" required></textarea>
 
-                <!-- Other Information -->
-                <fieldset class="other">
-                    <legend>Additional Information</legend>
+        <label for="salary">Yearly gross salary (€)</label>
+        <input type="number" id="salary" name="salary" min="0" step="1000" required>
+    </fieldset>
 
-                    <label for="other-infos">Other notes</label>
-                    <textarea id="other-infos" name="other_infos"></textarea>
-                </fieldset>
+    <!-- Other Information -->
+    <fieldset class="other">
+        <legend>Additional Information</legend>
+        <label for="other-infos">Other notes</label>
+        <textarea id="other-infos" name="other_infos"></textarea>
+    </fieldset>
 
-                <!-- GDPR -->
-                <fieldset class="dsgvo">
-                    <legend>GDPR Consent</legend>
-                    <p>Do you agree with the GDPR policy?</p>
-                    <a href="#">Click here to read the GDPR policy</a><br>
+    <!-- GDPR -->
+    <fieldset class="dsgvo">
+        <legend>GDPR Consent</legend>
+        <p>Do you agree with the GDPR policy?</p>
+        <a href="#">Click here to read the GDPR policy</a>
 
-                    <label>
-                        <input type="radio" name="gdpr" value="yes" required>
-                        Yes
-                    </label>
-                    <label>
-                        <input type="radio" name="gdpr" value="no">
-                        No
-                    </label>
-                </fieldset>
+        <label>
+            <input type="radio" name="gdpr" value="yes" required> Yes
+        </label>
+        <label>
+            <input type="radio" name="gdpr" value="no"> No
+        </label>
+    </fieldset>
 
-                <!-- Submit -->
-                <button type="submit" class="send">Send message to Alex</button>
-            </form>
-        </section>
-    </main>
+    <!-- Submit -->
+    <button type="submit" class="send"><i class="fa-solid fa-paper-plane"></i>Send message to Alex</button>
+</form>
+</section>
+</main>
 
-    <footer>
-        <nav class="footer-nav">
-            <ul>
-                <li><a href="{% url 'legal'%}">Legal Rights</a></li>
-                <li><a href="{% url 'imprint' %}">Legal Notice</a></li>
-                <li><a href="{% url 'contactform' %}">Contact Me</a></li>
-                <p>&copy; 2025 Alex Gramm. All rights reserved.</p>
-            </ul>
-        </nav>
-    </footer>
+<footer>
+    <nav>
+        <ul>
+            <li><a href="{% url 'legal'%}" class="legal"><i class="fa-solid fa-scale-balanced"></i> Legal Rights</a></li>
+            <li><a href="{% url 'imprint' %}" class="imprint"><i class="fa-solid fa-file-contract"></i> Legal Notice</a></li>
+            <li><a href="{% url 'contactform' %}" class="contactform"><i class="fa-solid fa-envelope"></i> Contact Me</a></li>
+        </ul>
+        <p id="copyright">&copy; 2025 Alex Gramm. All rights reserved.</p>
+    </nav>
+</footer>
 </body>
 </html>

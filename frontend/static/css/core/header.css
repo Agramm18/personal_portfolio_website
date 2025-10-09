@@ -1,0 +1,80 @@
+.res-download {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.res-download a {
+
+    padding: 20px 15px 20px 15px;
+
+    border: 2px solid #4A59A7;
+    background-color: #4A59A7;
+    border-radius: 25px;
+
+    text-decoration: none;
+    font-size: 22px;
+
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.res-download a:hover {
+    border: 2px solid #877CCD;
+    border-radius: 25px;
+    color: white;
+    background-color: #877CCD;
+}
+
+
+.website-title {
+    width: 65%;
+    margin-left: 25%;
+
+    color: white;
+    font-size: 40px;
+}
+
+.navbar {
+    margin-right: 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin-top: 50px;
+    padding: 0;
+
+    display: flex;
+    gap: 25px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar li {
+    list-style-type: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.navbar a.active {
+    color: #1c53a0;
+}
+
+.navbar a.active:hover {
+    color: #C0A6DF;
+}
+.navbar a:hover {
+    color: #877CCD;
+}
+
+
+.navbar i {
+    padding: 0px 20px 0px 20px;
+}

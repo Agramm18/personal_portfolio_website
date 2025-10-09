@@ -1,0 +1,19 @@
+.about-alex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: auto;
+    gap: 20px;
+
+}
+
+.personal-information {
+    grid-column: 1;
+}
+
+.work-experience {
+    grid-column: 2;
+}
+
+.personal-interests {
+    grid-column: 3;
+}

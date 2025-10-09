@@ -1,0 +1,170 @@
+body {
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+form {
+    width: 35%;
+    margin: 100px auto;
+    padding: 15px 10px 15px 10px;
+    transform: translateX(100px);
+    border: 2px solid #1C3A64;
+    border-radius: 25px;
+}
+
+form label, form section, form input, form textarea {
+    display: block;
+}
+
+form h2 {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+}
+
+form fieldset {
+    width: 50%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px 5px 10px 5px;
+
+    border: 2px solid transparent;
+}
+
+form legend {
+    text-align: center;
+    color: white;
+    font-size: 30px; 
+}
+
+form label {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    color: white;
+    font-size: 25px;
+}
+
+form input {
+    width: 75%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+
+    padding: 10px 5px 10px 5px;
+
+    border: 2px solid #1C3A64;
+    border-radius: 25px;
+
+    background-color: transparent;
+    color: white;
+
+    font-size: 20px;
+    
+}
+
+form select {
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+
+    padding: 10px 5px 10px 5px;
+
+    border: 2px solid #1C3A64;
+    border-radius: 10px;
+
+    background-color: #1C3A64;
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+    transform: 0.2s;
+}
+
+form textarea {
+    width: 50%;
+    height: 250px;
+    margin-left: 25px;
+
+    resize: none;
+    border: 2px solid white;
+    border-radius: 15px;
+
+    font-size: 20px;
+}
+form p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+form a {
+    display: block;
+    width: 75%;
+    margin: 20px auto;
+    padding: 20px 10px 20px 10px;
+
+    border: 2px solid #4A59A7;
+    border-radius: 25px;
+
+    background-color: #4A59A7;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+form a:hover {
+    border: 2px solid #877CCD;
+    color: black;
+    background-color: #877CCD;
+}
+
+form button {
+    display: block;
+    margin: 30px auto 0 auto;
+
+    width: 35%;
+    padding: 20px 10px 20px 10px;
+
+    border: 2px solid #1C3A64;
+    border-radius: 25px;
+
+    background-color: #1C3A64;
+    color: white;
+
+    font-size: 20px;
+
+    text-align: center;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+form button:hover {
+    border: 2px solid #C0A6DF;
+    background-color: #C0A6DF;
+    color: black;
+}
+
+form i {
+    padding-right: 25px;
+}
+
+
+.dsgvo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dsgvo label {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+}

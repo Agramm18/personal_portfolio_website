@@ -1,0 +1,8 @@
+background = #000000ff
+
+Link hover = #4A59A7
+Link-background = #4A59A7
+link-hover-background-change = #877CCD
+
+element-background = #1C3A64
+element-background-change-hover = #C0A6DF

@@ -1,0 +1,52 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    padding: 10px 30px;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer  a{
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+footer a:hover {
+    color: #877CCD;
+}
+
+footer p {
+    font-size: 20px;
+    color: white;
+}
+
+#copyright {
+    margin-right: 75px;
+    margin-left: auto;
+}
+
+footer i {
+    margin-right: 10px;
+    padding: 0px 15px;
+}

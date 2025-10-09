@@ -1,0 +1,18 @@
+header {
+    display: grid;
+    grid-template-columns: 0.5fr 0.fr 1.5fr;
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.res-download {
+    grid-column: 1;
+}
+
+.website-title {
+    grid-column: 2;
+}
+
+.navbar {
+    grid-column: 3;
+}
