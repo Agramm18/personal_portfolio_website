@@ -1,3 +1,16 @@
+//Make text compatible
+//convert ä/ö/ü with recognizable text
+function normalizeText(text) {
+    return text
+        .toLowerCase()
+        .replace(/ä/g, "ae")
+        .replace(/ö/g, "oe")
+        .replace(/ü/g, "ue")
+        .replace(/ß/g, "ss")
+        .replace(/\s+/g, "-");
+}
+
+
 function errorHandeling() {
     try {
         //Collect data from contact form
@@ -77,22 +90,23 @@ function errorHandeling() {
         } else if (!jobSalary.value.trim()) {
             throw new Error("Please type in the yearly gross salary to continue");
         } else if (parseFloat(jobSalary.value) < 50000) {
-            
-            //convert Values to URL format
-            const jobCityURL = jobLocationCity.value.toLowerCase().replace(/\s+/g, "-");
-            const jobCountryURL = jobLocationCountry.value.toLowerCase().replace(/\s+/g, "-");
-            const jobTitleURL = jobTitle.value.toLowerCase().replace(/\s+/g, "-");
 
-            //Open a new tab in kunu with the anual salary of a software developer if the salary is under 50k
-            if (confirm("The entered salary seems to be below the market average. Please enter a value above €50,000. I will open a new tab showing an official website with annual software developer salaries in Switzerland, Germany, and Austria."))
-                window.open(`www.glassdoor.com/Salaries/${jobTitleURL}-salary-SRCH_KO0,18.htm&ved=2ahUKEwio5rz38ZeQAxWnBdsEHcBVFK0QFnoECCAQAQ&usg=AOvVaw03KGqtkSBz6Ha18LsOB03Y`);
+            //Define search values for google
+            const jobTitleParam = encodeURIComponent(jobTitle.value.trim());
+            const countryParam = encodeURIComponent(jobLocationCountry.value.trim());
+            const jobExperienceLevelParam = encodeURI(jobExperienceLevel.value.trim())
+
+            //Build the url for google search
+            const googleSearchURL = `https://www.google.com/search?q=${jobExperienceLevelParam}+${jobTitleParam}+${countryParam}+average+salary`;
+
+            //Open a new tab in glassdor with the anual salary if the salary is below 50k
+            if (confirm("The entered salary seems to be below the market average. Please enter a value above €50,000. I will open a new tab showing an official website with the anual salary from this job in your country/city"))
+                window.open(googleSearchURL, "_blank");
             return;
 
         } else if (!gdprValue.checked) //Checked to check if cheked 
         {
             throw new Error("Please select if you agree to my GDPR");
-        } else {
-            throw new Error("An unexpected error happend please try again");
         }
 
     } catch (error) {
