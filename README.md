@@ -181,7 +181,7 @@ DATABASES = {
 * If you test this project locally, ensure you have MySQL and Python installed.
 * Always store credentials securely in your `.env` file.
 * Do **not** upload any sensitive or private data to public repositories.
-
+* If everything goes as planed the website will be released in 2026
 ---
 
 ## ⭐ Tip
