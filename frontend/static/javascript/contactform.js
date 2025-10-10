@@ -42,7 +42,7 @@ function errorHandeling() {
 
         //Other
         const additionalInformation = document.getElementById("other-infos");
-        const gdprValue = document.getElementById("gdpr");
+        const gdprValue = document.querySelector('input[name="gdpr"]:checked');
 
         //Check the form fields by category
         //.value.trim() to check actuall content not DOOM Element
@@ -107,6 +107,11 @@ function errorHandeling() {
         } else if (!gdprValue.checked) //Checked to check if cheked 
         {
             throw new Error("Please select if you agree to my GDPR");
+
+        } else {
+            const sendForm = document.getElementById("contact-form-send");
+
+            sendForm.requestSubmit();
         }
 
     } catch (error) {
@@ -114,7 +119,7 @@ function errorHandeling() {
         alert("" + error.message);
     }
 }
-submitBTN = document.getElementById("submit")
+submitBTN = document.getElementById("send-btn")
 
 submitBTN.addEventListener("click", (event) => {
     event.preventDefault();
