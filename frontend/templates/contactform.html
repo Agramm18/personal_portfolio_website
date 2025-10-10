@@ -45,7 +45,7 @@
 
 <main>
 <section class="contact-alex">
-<form method="post" action="{% url 'contactform' %}">
+<form method="post" action="{% url 'contactform' %}" id="contact-form-send">
     {% csrf_token %}
 
     <div class="hero">
@@ -126,10 +126,10 @@
         <input type="url" id="website" name="website" required>
 
         <label for="company-email">Company email</label>
-        <input type="email" id="company_email" name="company_email" required>
+        <input type="email" id="company_email" name="company_email">
 
         <label for="company-phone">Company phone</label>
-        <input type="tel" id="company-phone" name="company-phone" required pattern="^\+?[0-9\s\-]{10,20}$">
+        <input type="tel" id="company-phone" name="company-phone" pattern="^\+?[0-9\s\-]{10,20}$">
 
         <label for="company-address">Company address</label>
         <input type="text" id="company-address" name="company_address" required>
@@ -191,7 +191,9 @@
     </fieldset>
 
     <!-- Submit -->
-    <button type="submit" class="send"><i class="fa-solid fa-paper-plane"></i>Send message to Alex</button>
+    <button type="submit" class="send" id="send-btn"><i class="fa-solid fa-paper-plane"></i>Send message to Alex</button>
+
+    <script src="{% static 'javascript/contactform.js' %}"></script>
 </form>
 </section>
 </main>
