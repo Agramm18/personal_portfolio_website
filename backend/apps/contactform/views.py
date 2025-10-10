@@ -4,10 +4,33 @@ import smtplib
 import os
 from email.message import EmailMessage
 from dotenv import load_dotenv
+from urllib.parse import quote, urlencode
+import pycountry
 
 load_dotenv()
 
 def contact_form_view(request):
+
+    ##create redirect link to glassdor
+    if request.method == "POST":
+        try:
+            salary = request.POST.get("salary", 0)
+            job_title = request.POST.get("job_title", "")
+            location_country = request.POST.get("location_country", "")
+            experience_level = request.POST.get("experience_level", "")
+
+            #Build URL for Google
+            values = quote(f"{experience_level} {job_title} {location_country} average salary")
+            google_url = f"https://www.google.com/search?q={values}"
+
+            #Check if salary is less than 50k
+            #If thats the case the recruier will redirected to glassdor
+            float_salary = float(salary)
+            if float_salary < 50000:
+                return redirect(google_url) 
+
+        except Exception as e:
+            print("Error detected", e)
 
     #################################################################################################
     #Database Logic
@@ -124,7 +147,7 @@ def contact_form_view(request):
                 additional_information, gdbpr_value
             ]):
                 raise ValueError("No input where submittet for the email please try again")
-            
+                
             else:
                 sender_email = os.getenv("SMTP_SENDER_EMAIL")
                 reciver_email = os.getenv("SMTP_SENDER_EMAIL")
