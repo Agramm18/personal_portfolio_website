@@ -163,9 +163,9 @@ DATABASES = {
     }
 }
 ```
-
-> You don’t need to modify path variables — Django uses relative paths for child apps, so all directories are already configured correctly in the main project settings.
-
+---
+> You don’t need to modify path variables in the HTML links— Django uses relative paths for child apps, so all directories are already configured correctly in the main project settings.
+---
 ---
 
 ## 👨‍💻 Author
