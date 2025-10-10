@@ -100,7 +100,7 @@ function errorHandeling() {
             const googleSearchURL = `https://www.google.com/search?q=${jobExperienceLevelParam}+${jobTitleParam}+${countryParam}+average+salary`;
 
             //Open a new tab in glassdor with the anual salary if the salary is below 50k
-            if (confirm("The entered salary seems to be below the market average. Please enter a value above €50,000. I will open a new tab showing an official website with the anual salary from this job in your country/city"))
+            if (confirm("The entered salary appears below market average. I only accept salaries above €50,000. I’ll open a Google search showing the typical salary for this role based on title, experience, and location."))
                 window.open(googleSearchURL, "_blank");
             return;
 
