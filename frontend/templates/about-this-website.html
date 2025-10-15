@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Libary Imports-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/78af35e736.js" crossorigin="anonymous"></script>
+
+    <!--Core Design-->
+    <link rel="stylesheet" href="{% static 'css/core/background.css' %}">
+    <link rel="stylesheet" href="{%static 'css/core/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/core/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/core/footer.css' %}">
+
+    <!--Layout-->
+    <link rel="stylesheet" href="{% static 'css/layout/header_grid.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout/home_grid.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout/footer_grid.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout/base_layout.css' %}">
+
+    <!--Page Design-->
+    <link rel="stylesheet" href="{% static 'css/page_design/home.css' %}">
+
+   <title>Techstack</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="res-download">
+            <a href="#"">Click Here to download my resume (PDF)</a>
+        </div>
+        
+        <h1 class="website-title">Hello, I'm Alex, a self-taught software developer</h1>
+
+        <nav class="navbar">
+            <ul class="">
+                <li><a href="{% url 'home' %}"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="{% url 'about' %}"><i class="fa-solid fa-user"></i>About Me</a></li>
+                <li><a href="{% url 'projects'%}"><i class="fa-solid fa-diagram-project"></i>Projects</a></li>
+                <li><a href="{% url 'contactform' %}"><i class="fa-solid fa-envelope"></i>Contact Me</a></li>
+                <li><a href="{% url 'socialmedia' %}"><i class="fa-solid fa-hashtag"></i>Social Media</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="">
+
+    <h2 class="title">Welcome to this page where i display the technology stack from this website</h2>
+
+    <section class="technologie-stack">
+
+        <div class="frontend">
+            <h3 class="subtitle">Frontend</h3>
+            <ul>
+                <lI>HTML</lI>
+                <li>Vanilla/Classic CSS</li>
+                <li>JavaScript</li>
+                <li>JSON</li>
+            </ul>
+        </div>
+
+        <div class="backend">
+            <h3 class="subtitle">Backend</h3>
+            <ul>
+                <li>Backend technology: Django</li>
+                <li>Main Language: Python</li>
+                <li>Kontakt formular logic</li>
+                <ul>
+                    <li>Email logic: SMTP with python</li>
+                    <li>Database logic: MySQL with the mysql python connector</li>
+                </ul>
+            </ul>
+        </div>
+
+        <div class="database">
+            <h3 class="subtitle">Database</h3>
+            <ul>
+                <li>MySQL</li>
+            </ul>
+        </div>
+
+        <div class="deployment">
+            <h3 class="subtitle">Deployment</h3>
+            <ul>
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>Nginx</li>
+            </ul>
+        </div>
+    </section>
+
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="{% url 'legal'%}" class="legal"><i class="fa-solid fa-scale-balanced "></i> Legal Rights</a></li>
+                <li><a href="{% url 'imprint' %}" class="imprint"><i class="fa-solid fa-file-contract "></i> Legal Notice</a></li>
+                <li><a href="{% url 'contactform' %}" class="contactform"><i class="fa-solid fa-envelope "></i> Contact Me</a></li>
+                <li><a href="{% url 'website_info' %}" class="techstack"><i class="fa-solid fa-gears"></i> Techstack</a></li>
+            </ul>
+            <p id="copyright">&copy; 2025 Alex Gramm. All rights reserved.</p>
+        </nav>
+    </footer>
+</body>
+</html>
