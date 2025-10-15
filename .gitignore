@@ -8,6 +8,7 @@ security/
 dev/
 database/
 node_modules/
+deployment/
 
 *.vscode/
 *.env
