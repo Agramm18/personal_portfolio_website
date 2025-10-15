@@ -99,12 +99,13 @@ function errorHandeling() {
             //Build the url for google search
             const googleSearchURL = `https://www.google.com/search?q=${jobExperienceLevelParam}+${jobTitleParam}+${countryParam}+average+salary`;
 
-            //Open a new tab in glassdor with the anual salary if the salary is below 50k
+            //Open a new tab with a google search if salary is less thank 50k
+            //Goolge search syntax: avarage salary {experience level} {jobtitle} in {location country}
             if (confirm("The entered salary appears below market average. I only accept salaries above €50,000. I’ll open a Google search showing the typical salary for this role based on title, experience, and location."))
                 window.open(googleSearchURL, "_blank");
             return;
 
-        } else if (!gdprValue.checked) //Checked to check if cheked 
+        } else if (!gdprValue.checked) //Checked to check if checked 
         {
             throw new Error("Please select if you agree to my GDPR");
 
