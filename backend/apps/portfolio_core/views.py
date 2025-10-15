@@ -19,3 +19,6 @@ def legal_information(request):
 
 def imprint(request):
     return render(request, "imprint.html")
+
+def website_info(request):
+    return render(request, "about-this-website.html")
