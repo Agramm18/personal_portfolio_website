@@ -9,5 +9,6 @@ urlpatterns = [
     path("contactform/", contact_form_view, name="contactform"), 
     path("socialmedia/", views.social_media, name="socialmedia"),
     path("legal/", views.legal_information, name="legal"),
-    path("imprint/", views.imprint, name="imprint")
+    path("imprint/", views.imprint, name="imprint"),
+    path("about_this_website/", views.website_info, name="website_info")
 ]
