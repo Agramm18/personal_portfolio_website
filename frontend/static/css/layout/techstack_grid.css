@@ -1,0 +1,31 @@
+.technologie-stack {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 25px;
+}
+
+.frontend {
+    grid-column: 1;
+}
+
+.backend {
+    grid-column: 2;
+}
+
+.database {
+    grid-column: 3;
+}
+
+.deployment {
+    grid-column: 4;
+}
+
+.subtitle {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+main ul {
+    margin-top: 25px;
+}
