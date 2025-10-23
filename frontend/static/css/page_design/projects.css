@@ -1,3 +1,48 @@
+/* Flipcard Logic */
+
+.flip-card {
+    background-color: transparent;
+    width: 50%;
+    height: 400px;
+    perspective: 1000px;
+
+    margin: 0 auto;
+    padding: 20px 10px 20px 10px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #1C3A64;
+    border-radius: 25px;
+}
+
+.back {
+    transform: rotatey(180deg);
+}
+
 /*Basic Design */
 
 .flip-card h3 {
@@ -22,9 +67,23 @@
 }
 
 .flip-card a {
+    padding: 15px 10px 15px 10px;
     color: white;
     font-size: 20px;
     text-decoration: none;
+
+    border: 2px solid #4A59A7;
+    border-radius: 25px;
+
+    cursor: pointer;
+    transition: 0.2s;
 }
 
+.flip-card a:hover {
+    color: #877CCD;
+}
+
+.description {
+    width: 50%;
+}
 /*Basic Design */
