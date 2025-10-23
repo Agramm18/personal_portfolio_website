@@ -19,9 +19,10 @@
     <link rel="stylesheet" href="{% static 'css/layout/header_grid.css' %}">
     <link rel="stylesheet" href="{% static 'css/layout/footer_grid.css' %}">
     <link rel="stylesheet" href="{% static 'css/layout/base_layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout/projects-grid.css' %}">
 
     <!--Page Design-->
-    <link rel="stylesheet" href="{% static 'css/page_design/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/page_design/projects.css' %}">
 
 
     <title>Projects</title>
@@ -51,78 +52,90 @@
         <section class="projects">
 
             <!-- Project 1 -->
-            <div class="container">
+            <div class="flip-card" id="project-1">
+                <div class="flip-card-inner">
                 <div class="front">
                     <h3 class="project-title">Patient Management System</h3>
                     <a href="#">View on GitHub</a>
-                </div>
-                <div class="back">
-                    <h4 class="title-back">Technologies</h4>
-                    <ul>
-                        <li>Python</li>
-                    </ul>
-                    <h4 class="title-back">Description</h4>
-                    <p>This project simulates a simple patient management system.  
-                    It does not include a GUI and does not use a database.</p>
+                    </div>
+                    <div class="back">
+                        <h4 class="title-back">Technologies</h4>
+                        <ul>
+                            <li>Python</li>
+                        </ul>
+                        <h4 class="title-back">Description</h4>
+                        <p class="description">This project simulates a simple patient management system.  
+                        It does not include a GUI and does not use a database.</p>
+                    </div>
                 </div>
             </div>
 
             <!-- Project 2 -->
-            <div class="container">
-                <div class="front">
-                    <h3 class="project-title">To-Do List</h3>
-                    <a href="#">View on GitHub</a>
-                </div>
-                <div class="back">
-                    <h4 class="title-back">Technologies</h4>
-                    <ul>
-                        <li>Python</li>
-                    </ul>
-                    <h4 class="title-back">Description</h4>
-                    <p>A simple Python-based to-do list application that manages tasks from the command line.  
-                    It does not include a GUI and does not use a database.</p>
+            <div class="flip-card" id="project-2">
+                <div class="flip-card-inner">
+                    <div class="front">
+                        <h3 class="project-title">To-Do List</h3>
+                        <a href="#">View on GitHub</a>
+                    </div>
+                    <div class="back">
+                        <h4 class="title-back">Technologies</h4>
+                        <ul>
+                            <li>Python</li>
+                        </ul>
+                        <h4 class="title-back">Description</h4>
+                        <p class="description">A simple Python-based to-do list application that manages tasks from the command line.  
+                        It does not include a GUI and does not use a database.</p>
+                    </div>
                 </div>
             </div>
 
             <!-- Project 3 -->
-            <div class="container">
-                <div class="front">
-                    <h3 class="project-title">Rock Paper Scissors</h3>
-                    <a href="#">View on GitHub</a>
-                </div>
-                <div class="back">
-                    <h4 class="title-back">Technologies</h4>
-                    <ul>
-                        <li>Python</li>
-                    </ul>
-                    <h4 class="title-back">Description</h4>
-                    <p>A CLI (Command Line Interface) game where you play Rock, Paper, Scissors against the computer.  
-                    The game tracks rounds, points, and ties, then displays the final score and shows who won.</p>
+            <div class="flip-card" id="project-3">
+                <div class="flip-card-inner">
+                    <div class="front">
+                        <h3 class="project-title">Rock Paper Scissors</h3>
+                        <a href="#">View on GitHub</a>
+                    </div>
+                    <div class="back">
+                        <h4 class="title-back">Technologies</h4>
+                        <ul>
+                            <li>Python</li>
+                        </ul>
+                        <h4 class="title-back">Description</h4>
+                        <p class="description">A CLI (Command Line Interface) game where you play Rock, Paper, Scissors against the computer.  
+                        The game tracks rounds, points, and ties, then displays the final score and shows who won.</p>
+                    </div>
                 </div>
             </div>
 
             <!-- Project 4 -->
-            <div class="container">
-                <div class="front">
-                    <h3 class="project-title">This Portfolio Website</h3>
-                    <a href="#">View on GitHub</a>
-                </div>
-                <div class="back">
-                    <h4 class="title-back">Technologies</h4>
-                    <ul>
-                        <li>Python (Django)</li>
-                        <li>JavaScript</li>
-                        <li>JSON</li>
-                        <li>HTML & CSS</li>
-                        <li>MySQL</li>
-                    </ul>
-                    <h4 class="title-back">Description</h4>
-                    <p>This is the project you are currently viewing.  
-                    It was built with Django, MySQL, and front-end technologies to showcase my portfolio.</p>
+            <div class="flip-card" id="project-4">
+                <div class="flip-card-inner">
+                    <div class="front">
+                        <h3 class="project-title">This Portfolio Website</h3>
+                        <a href="#">View on GitHub</a>
+                    </div>
+                    <div class="back">
+                        <h4 class="title-back">Technologies</h4>
+                        <ul>
+                            <li>Python (Django)</li>
+                            <li>JavaScript</li>
+                            <li>JSON</li>
+                            <li>HTML & CSS</li>
+                            <li>MySQL</li>
+                        </ul>
+                        <h4 class="title-back">Description</h4>
+                        <p class="description">This is the project you are currently viewing.  
+                        It was built with Django, MySQL, and front-end technologies to showcase my portfolio.</p>
+                    </div>
                 </div>
             </div>
-
         </section>
+        
+        <div class="call-to-btn">
+            <a href="">Or click here to get to my repositories</a>
+        </div>
+
     </main>
 
     <footer>
