@@ -28,23 +28,20 @@
 <body>
     <header>
 
-        <div class="res-downlaod">
-            <a href="#">Click Here to download my resume (PDF)</a>
+        <div class="res-download">
+            <a href="#"">Click Here to download my resume (PDF)</a>
         </div>
         
         <h1 class="website-title">Hello, I'm Alex, a self-taught software developer</h1>
 
         <nav class="navbar">
-
-            <ul>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'about' %}">About Me</a></li>
-                <li><a href="{% url 'projects'%}">Projects</a></li>
-                <li><a href="{% url 'contactform' %}">Contact Me</a></li>
-                <li><a href="{% url 'socialmedia' %}">Social Media</a></li>
-
+            <ul class="">
+                <li><a href="{% url 'home' %}"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="{% url 'about' %}"><i class="fa-solid fa-user"></i>About Me</a></li>
+                <li><a href="{% url 'projects'%}"><i class="fa-solid fa-diagram-project"></i>Projects</a></li>
+                <li><a href="{% url 'contactform' %}"><i class="fa-solid fa-envelope"></i>Contact Me</a></li>
+                <li><a href="{% url 'socialmedia' %}"><i class="fa-solid fa-hashtag"></i>Social Media</a></li>
             </ul>
-
         </nav>
 
     </header>
