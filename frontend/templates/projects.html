@@ -1,28 +1,50 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Libary Imports-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/78af35e736.js" crossorigin="anonymous"></script>
+
+    <!--Core Design-->
+    <link rel="stylesheet" href="{% static 'css/core/background.css' %}">
+    <link rel="stylesheet" href="{%static 'css/core/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/core/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/core/footer.css' %}">
+
+    <!--Layout-->
+    <link rel="stylesheet" href="{% static 'css/layout/header_grid.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout/footer_grid.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout/base_layout.css' %}">
+
+    <!--Page Design-->
+    <link rel="stylesheet" href="{% static 'css/page_design/home.css' %}">
+
+
     <title>Projects</title>
 </head>
 <body>
     <header>
+
         <div class="res-download">
-            <a href="#">Click here to download my resume (PDF)</a>
+            <a href="#"">Click Here to download my resume (PDF)</a>
         </div>
         
         <h1 class="website-title">Hello, I'm Alex, a self-taught software developer</h1>
 
         <nav class="navbar">
-            <ul>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'about' %}">About Me</a></li>
-                <li><a href="{% url 'projects'%}">Projects</a></li>
-                <li><a href="{% url 'contactform' %}">Contact Me</a></li>
-                <li><a href="{% url 'socialmedia' %}">Social Media</a></li>
-
+            <ul class="">
+                <li><a href="{% url 'home' %}"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="{% url 'about' %}"><i class="fa-solid fa-user"></i>About Me</a></li>
+                <li><a href="{% url 'projects'%}"><i class="fa-solid fa-diagram-project"></i>Projects</a></li>
+                <li><a href="{% url 'contactform' %}"><i class="fa-solid fa-envelope"></i>Contact Me</a></li>
+                <li><a href="{% url 'socialmedia' %}"><i class="fa-solid fa-hashtag"></i>Social Media</a></li>
             </ul>
         </nav>
+
     </header>
 
     <main>
