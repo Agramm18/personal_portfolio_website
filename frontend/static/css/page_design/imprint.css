@@ -1,0 +1,27 @@
+.title, .imprint-container {
+    margin-left: 100px;
+}
+.title {
+    margin-top: 200px;
+    font-size: 30px;
+    color: white;
+}
+
+.imprint-container li {
+    display: block;
+    color: white;
+    font-size: 25px;
+    line-height: 50px;
+    list-style-type: none;
+}
+
+.imprint-container a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.imprint-container a:hover {
+    color: #877CCD;
+}
