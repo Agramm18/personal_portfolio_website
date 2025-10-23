@@ -1,0 +1,30 @@
+/*Basic Design */
+
+.flip-card h3 {
+    color: white;
+    font-size: 25px;
+}
+
+.flip-card h4 {
+    color: white;
+    font-size: 22px;
+}
+
+.flip-card li {
+    list-style-type: none;
+    color: white;
+    font-size: 20px;
+}
+
+.flip-card p {
+    color: white;
+    font-size: 20px;
+}
+
+.flip-card a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/*Basic Design */
