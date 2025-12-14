@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.portfolio_core',
     'apps.contactform',
-    'phonenumber_field'
+    'phonenumber_field',
+    'apps.ai_bot'
 ]
 
 MIDDLEWARE = [
