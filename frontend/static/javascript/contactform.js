@@ -101,7 +101,7 @@ function errorHandeling() {
 
             //Open a new tab with a google search if salary is less thank 50k
             //Goolge search syntax: avarage salary {experience level} {jobtitle} in {location country}
-            if (confirm("The entered salary appears below market average. I only accept salaries above €50,000. I’ll open a Google search showing the typical salary for this role based on title, experience, and location."))
+            if (confirm("Based on the provided information, the salary range does not currently align with my compensation expectations (minimum €50,000).For reference, I’ll open a search showing typical market salary ranges for this role based on title, experience, and location."))
                 window.open(googleSearchURL, "_blank");
             return;
 
