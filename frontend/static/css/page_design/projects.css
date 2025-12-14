@@ -1,89 +1,120 @@
-/* Flipcard Logic */
-
-.flip-card {
-    background-color: transparent;
-    width: 50%;
-    height: 400px;
-    perspective: 1000px;
-
-    margin: 0 auto;
-    padding: 20px 10px 20px 10px;
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+.projects {
+    margin-top: 150px;
 }
 
 .front, .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    overflow: hidden;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    border: 2px solid #1C3A64;
+    border: 2px solid #C0A6DF;
     border-radius: 25px;
 }
 
-.back {
-    transform: rotatey(180deg);
-}
+.front a {
+    
+    padding: 25px;
 
-/*Basic Design */
+    border: 2px solid #4A59A7;
+    border-radius: 25px;
 
-.flip-card h3 {
-    color: white;
-    font-size: 25px;
-}
-
-.flip-card h4 {
-    color: white;
-    font-size: 22px;
-}
-
-.flip-card li {
-    list-style-type: none;
-    color: white;
-    font-size: 20px;
-}
-
-.flip-card p {
-    color: white;
-    font-size: 20px;
-}
-
-.flip-card a {
-    padding: 15px 10px 15px 10px;
     color: white;
     font-size: 20px;
     text-decoration: none;
 
-    border: 2px solid #4A59A7;
-    border-radius: 25px;
+    cursor: pointer;
+}
+
+.project-title {
+    text-align: center;
+
+    color: white;
+    font-size: 25px;
+
+}
+
+.title-back {
+    text-align: center;
+
+    color: white;
+    font-size: 25px;
+}
+
+.back li {
+    color: white;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+.description {
+    width: 25%;
+    color: white;
+    font-size: 20px;
+}
+
+.link-id a {
+    color: #877CCD;
+    font-size: 20px;
+    text-decoration: underline;
 
     cursor: pointer;
     transition: 0.2s;
 }
 
-.flip-card a:hover {
-    color: #877CCD;
+.link-id a:hover {
+    color: #4A59A7;
+    font-size: 22px;
 }
 
-.description {
-    width: 50%;
+
+/* Flipcard Animation */
+
+/*Main Container */
+
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    perspective: 1000px;
 }
-/*Basic Design */
+
+/* Back & Front */
+.flip-card-inner {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+/* Front & Back Layout */
+
+.front,
+.back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Front */
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+}
+
+/* Back */
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+/* Card hover Animation */
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
