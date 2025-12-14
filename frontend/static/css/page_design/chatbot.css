@@ -1,0 +1,51 @@
+.data-form {
+    margin-top: 250px;
+}
+
+#label-title {
+    font-size: 25px;
+    color: white;
+}
+
+input {
+    width: 25%;
+    height: 75%;
+    padding: 15px;
+    border: 2px solid white;
+    border-radius: 25px;
+
+    color: white;
+    background-color: black;
+    
+    font-size: 20px;
+}
+
+button {
+    padding: 10px;
+
+    border: 2px solid #1C3A64;
+    border-radius: 25px;
+
+    background-color: #1C3A64;
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #C0A6DF;
+    color: black;
+}
+
+i {
+    margin: 20px;
+}
+
+p {
+    text-align: left;
+    font-size: 15px;
+    color: white;
+}
