@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from urllib.parse import quote, urlencode
 import pycountry
 
-load_dotenv()
+load_dotenv(override=True)
 
 def contact_form_view(request):
 
