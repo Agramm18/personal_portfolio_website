@@ -9,6 +9,7 @@ dev/
 database/
 node_modules/
 deployment/
+security/
 
 *.vscode/
 *.env
@@ -17,3 +18,5 @@ deployment/
 *postcss.config.js
 *tailwind.config.js
 *tailwindcss
+
+!frontend/static/json/chatbot
