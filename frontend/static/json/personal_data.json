@@ -1,0 +1,16 @@
+{
+    "personal_data": {
+
+        "person": {
+            "born at": "2003",
+            "current place of living": "Germany",
+            "Age": "22",
+            "Nationality": "German",
+
+            "languages": {
+                "English": "B2",
+                "German": "Mother tounge/fluent"
+            }
+        }
+    }
+}
