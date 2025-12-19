@@ -1,0 +1,36 @@
+form {
+    display: grid;
+    grid-template-columns: repat(1, 1fr);
+    grid-template-rows: 1fr 0.25fr 3fr 1fr 0.25fr;
+    gap: 50px;
+
+    place-items: center;
+}
+
+.Chatbot-Title {
+    grid-column: 1;
+    grid-row: 1;
+
+    font-size: 35px;
+    color: white;
+}
+
+#info-text-language {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#user-question {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#submit-button {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+#info-text {
+    grid-column: 1;
+    grid-row: 5;
+}
