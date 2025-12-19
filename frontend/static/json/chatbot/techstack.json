@@ -1,0 +1,29 @@
+{
+    "techstack": {
+        "languages": {
+            "Python": "mid-level",
+            "C++": "beginner",
+            "Java": "beginner",
+            "HTML": "mid-level",
+            "CSS": "beginner"
+        },
+        "frameworks": {
+            "Django": "beginner to mid"
+        },
+
+        "database": {
+            "(My)SQL": "beginner"
+        },
+
+        "devops": {
+            "Docker": "beginner",
+            "Kubernetes": "beginner",
+            "Helmcharts": "beginner"
+        },
+
+        "other": {
+            "Prometheus": "beginner",
+            "Grafana": "beginner"
+        }
+    }
+}

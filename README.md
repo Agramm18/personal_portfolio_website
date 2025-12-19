@@ -43,6 +43,7 @@ It showcases my skills, projects, and professional experience, and includes a fu
 | **Social**       | My social media links (alternative to the contact form)                         |
 | **Legal Notice** | Imprint page                                                                    |
 | **Legal Rights** | All legal information such as GDPR, cookies, and privacy details                |
+| **Chatbot**      | A Chatbot that answer your questions based on the pages from the website        |
 
 ---
 

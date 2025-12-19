@@ -1,0 +1,42 @@
+{
+    "personal_data": {
+
+        "person": {
+            "born at": "2003",
+            "current place of living": "Germany",
+            "Age": "22",
+            "Nationality": "German",
+
+            "languages": {
+                "English": "B2",
+                "German": "Mother tounge/fluent"
+            },
+
+            "contact": {
+                "Adress": {
+                    "Streetname": "",
+                    "Streetnumber": "",
+                    "Postalcode": "",
+
+                    "City": "",
+                    "County": "",
+                    "Country": ""
+                },
+                "Email": ["Buisness: alexgrammbiz@gmail.com", "Private: alexgramm@outlook.de"]
+            }
+        },
+
+        "work-experience": {
+            "2021": "BVJ at Berufsbildungswerk St. Elisabeth",
+            "2022-2025": "Apprenticeship in Office Management at Berufsbildungswerk St. Elisabeth",
+            "since 2025": "Apprenticeship as Application Developer at Retarus GmbH"
+
+        },
+
+        "desired-Fields": {
+            "Strong/Main Fields": ["Maschine Learning", "Robotics", "IT-Security"],
+            "Mid-Fields": ["forensic", "IoT & Embeed Systems", "Software Engineering"],
+            "Side-Fields": ["Web-Development, UI/UX-Design"]
+        }
+    }
+}
