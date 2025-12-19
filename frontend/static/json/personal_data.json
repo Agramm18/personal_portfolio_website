@@ -11,6 +11,19 @@
                 "English": "B2",
                 "German": "Mother tounge/fluent"
             }
+        },
+
+        "work-experience": {
+            "2021": "BVJ at Berufsbildungswerk St. Elisabeth",
+            "2022-2025": "Apprenticeship in Office Management at Berufsbildungswerk St. Elisabeth",
+            "since 2025": "Apprenticeship as Application Developer at Retarus GmbH"
+
+        },
+
+        "desired-Fields": {
+            "Strong/Main Fields": ["Maschine Learning", "Robotics", "IT-Security"],
+            "Mid-Fields": ["forensic", "IoT & Embeed Systems", "Software Engineering"],
+            "Side-Fields": ["Web-Development, UI/UX-Design"]
         }
     }
 }
