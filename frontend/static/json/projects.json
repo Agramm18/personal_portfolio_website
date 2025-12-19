@@ -1,0 +1,48 @@
+{
+  "projects": {
+    "banking_system": {
+      "languages": ["C++", "Python", "JSON"],
+      "description": "A banking system simulation developed to improve my C++ skills, OOP knowledge, and software design principles.",
+      "features": [
+        "GUI with Qt",
+        "Database integration"
+      ],
+      "status": "in_development"
+    },
+
+    "patient_management_system": {
+      "languages": ["Python"],
+      "description": "Final project created during my early Python learning phase to practice OOP, file handling, and software design.",
+      "features": [
+        "CLI-based application",
+        "File-based persistence"
+      ],
+      "status": "completed"
+    },
+
+    "resume_analyzer": {
+      "languages": ["Python", "C++"],
+      "description": "Analyzes how well a resume matches a job advertisement based on content similarity and required qualifications.",
+      "features": [
+        "NLP algorithm using spaCy",
+        "GUI with PyQt6",
+        "Score calculation algorithm in C++",
+        "Statistical calculations with NumPy"
+      ],
+      "status": "paused"
+    },
+
+    "portfolio_website": {
+      "languages": ["Python", "JavaScript", "HTML", "CSS", "JSON"],
+      "framework": "Django",
+      "database": "MySQL",
+      "devops": ["Docker", "Kubernetes", "Helm"],
+      "features": [
+        "Database integration",
+        "Contact form with SMTP mail dispatch",
+        "Chatbot integration"
+      ],
+      "status": "in_production"
+    }
+  }
+}
