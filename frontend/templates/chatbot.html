@@ -28,17 +28,17 @@
 </head>
 
 <body>
-    <header>
+    <header  id="chatbot-header">
 
         <div class="res-download">
             <a href="#"">Click Here to download my resume (PDF)</a>
         </div>
         
-        <h1 class="website-title">Hello, I'm Alex, a self-taught software developer</h1>
+        <h1 class="website-title" id="chatbot-title">Hello, I'm Alex, a self-taught software developer</h1>
 
         <nav class="navbar">
             <ul class="">
-                <li><a href="{% url 'home' %}"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li id="chatbot-navlink"><a href="{% url 'home' %}"><i class="fa-solid fa-house"></i>Home</a></li>
             </ul>
         </nav>
 
@@ -53,6 +53,7 @@
                 <h1 class="Chatbot-Title">Welcome to my AI Chatbot ask him any question about my work, tech stack, or experience and even more</h1>
                 <input type="text" id="user-question" name="user-question" required maxlength="250" placeholder="Example: What is Alex’s tech stack?">
 
+                <p id="info-text-language">Please note that only english language is supported and will be recognizced by my modell</p>
                 <button type="submit" class="submit-btn" id="submit-button"><i class="fa-solid fa-paper-plane"></i>Ask and get the answer to your question</button>
                 <p id="info-text">The data will be collect from the Portfolio-Website (JSON-based)</p>
             </form>
