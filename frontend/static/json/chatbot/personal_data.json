@@ -10,6 +10,19 @@
             "languages": {
                 "English": "B2",
                 "German": "Mother tounge/fluent"
+            },
+
+            "contact": {
+                "Adress": {
+                    "Streetname": "",
+                    "Streetnumber": "",
+                    "Postalcode": "",
+
+                    "City": "",
+                    "County": "",
+                    "Country": ""
+                },
+                "Email": ["Buisness: alexgrammbiz@gmail.com", "Private: alexgramm@outlook.de"]
             }
         },
 
