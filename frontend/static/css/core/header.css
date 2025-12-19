@@ -26,22 +26,20 @@
     background-color: #877CCD;
 }
 
-
 .website-title {
-    width: 65%;
+    width: 85%;
     margin-left: 25%;
 
     color: white;
     font-size: 40px;
 }
 
-.navbar {
-    margin-right: 50px;
-}
+
 
 .navbar ul {
     list-style: none;
     margin-top: 50px;
+    margin-right: 3%;
     padding: 0;
 
     display: flex;
@@ -77,4 +75,24 @@
 
 .navbar i {
     padding: 0px 20px 0px 20px;
+}
+
+#chatbot-header  {
+    display: grid;
+    grid-template-columns: 0.75fr 1fr 1fr;
+}
+
+#chatbot-title {
+    grid-column: 2;
+    justify-self: start;
+
+    margin-right: 75%;
+    margin-top: 5%;
+}
+
+
+#chatbot-navlink {
+    margin-right: 5%;
+    margin-bottom: 10%;
+    margin-top: -5px;
 }
